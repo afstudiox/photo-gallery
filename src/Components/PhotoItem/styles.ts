@@ -12,3 +12,22 @@ export const Container = styled.div`
         border-radius: 10px;
     }
 `;
+
+export const ControlContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+export const ControlButton = styled.button`
+    background-color: #756DF4;
+    color: #FFF;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+`;

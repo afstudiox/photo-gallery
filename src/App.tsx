@@ -42,6 +42,14 @@ const App = () => {
     }
   }
 
+  const handleDelete = async (imageName: string) => {
+    // Chama a função de exclusão da foto
+    await Photos.remove(imageName);
+    
+    // Atualiza a lista de fotos após a exclusão
+    setPhotos(await Photos.getAll());
+  };
+
 
   return (
     <C.Container>
@@ -71,7 +79,7 @@ const App = () => {
         {!loading && photo.length > 0 &&
           <C.PhotoList>
             {photo.map((item, index) => (
-              <PhotoItem key={index} url={item.url} name={item.name} />
+              <PhotoItem key={index} url={item.url} name={item.name} onDelete={handleDelete}/>
             ))}
           </C.PhotoList>
         }
