@@ -18,7 +18,7 @@ export const PhotoItem = ({ url, name, onDelete }: Props) => {
             <img src={url} alt={name} />
             {name}
             <C.ControlContainer>
-                <C.ControlButton onClick={handleDelete}>Excluir</C.ControlButton>
+                <C.ControlButton onClick={handleDelete}>x</C.ControlButton>
             </C.ControlContainer>
         </C.Container>
     );
